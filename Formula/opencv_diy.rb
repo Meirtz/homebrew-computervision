@@ -1,6 +1,6 @@
 require File.expand_path("../Requirements/cuda_requirement", __FILE__)
 
-class Opencv3 < Formula
+class OpencvDiy < Formula
   desc "Open source computer vision library, version 3"
   homepage "http://opencv.org/"
   revision 1
