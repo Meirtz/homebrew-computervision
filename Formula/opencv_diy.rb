@@ -57,7 +57,7 @@ class OpencvDiy < Formula
 
   option :cxx11
 
-  depends_on :ant => :build if build.with? "java"
+  depends_on "ant" => :build if build.with? "java"
   depends_on "cmake" => :build
   depends_on CudaRequirement => :optional
   depends_on "pkg-config" => :build
@@ -68,7 +68,7 @@ class OpencvDiy < Formula
   depends_on "gstreamer" => :optional
   depends_on "gst-plugins-good" if build.with? "gstreamer"
   depends_on "jasper" => :optional
-  depends_on :java => :optional
+  depends_on "java" => :optional
   depends_on "jpeg" => :recommended
   depends_on "jpeg-turbo" => :optional
   depends_on "libdc1394" => :optional
@@ -77,8 +77,8 @@ class OpencvDiy < Formula
   depends_on "openexr" => :recommended
   depends_on "openni" => :optional
   depends_on "openni2" => :optional
-  depends_on :python => :recommended unless OS.mac? && MacOS.version > :snow_leopard
-  depends_on :python3 => :optional
+  depends_on "python" => :recommended unless OS.mac? && MacOS.version > :snow_leopard
+  depends_on "python3" => :optional
   depends_on "qt" => :optional
   depends_on "tbb" => :optional
   depends_on "vtk" => :optional
